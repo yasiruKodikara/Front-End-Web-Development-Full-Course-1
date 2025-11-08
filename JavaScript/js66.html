@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating CSS</title>
+
+    <style>
+        #val1{
+            font-size:40px;
+        }
+        .container1{
+            height:50px;
+            width:50px;
+            background-color:red;
+            margin:auto;
+        }
+
+        .container2{
+            height:50px;
+            width:50px;
+            background-color:red;
+            margin:auto;
+        }
+        .container3{
+            height:50px;
+            width:50px;
+            background-color:red;
+            
+        }
+
+        .class1{
+            height:50px;
+            width:50px;
+            background-color:red;
+            margin:auto;
+        }
+
+        .class2{
+            height:500px;
+            width:50px;
+            background-color:rgb(0, 81, 255);
+            margin:auto;
+        }
+
+        .class3{
+            height:50px;
+            width:500px;
+            background-color:rgb(46, 196, 0);
+            margin:auto;
+        }
+
+        .class4{
+            height:500px;
+            width:500px;
+            background-color:rgb(163, 0, 228);
+            margin:auto;
+        }
+        
+
+        .hidden{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Manipulating CSS</h1>
+    width:<input type='number' id='val1'><br><br>
+    color:<input type="color" id="val2"><br><br>
+
+    <select id='classes'>
+        <option value='class1'>class1</option>
+        <option value='class2'>class2</option>
+        <option value='class3'>class3</option>
+        <option value='class4'>class4</option>	
+    </select>
+
+    <button onclick='colChange()' id='btn'>Change</button>
+    <hr>
+    <div class='container1'></div>
+
+    <hr>
+
+    <button onclick='show()' id="hide">Hide</button>
+    <button onclick='hide()' id="show">Show</button>
+    <button onclick='toggle()' id="toggle">toggle</button>
+
+    <div class='container2'></div>
+
+    <hr>
+    <div class='container3'></div>
+    
+
+    <script>
+        const val = document.getElementById('val1');
+        const box = document.querySelector('.container1');
+        const col = document.querySelector('#val2');
+        const cls = document.querySelector('#classes');
+        const box2 = document.querySelector('.container2');
+        const box3 = document.querySelector('.container3')
+
+        val.addEventListener('change',function(){
+            box.style.width = `${val.value}px`;
+            box.style.height = `${val.value}px`;
+        });
+
+        function colChange(){
+            box.style.backgroundColor = col.value;
+        }
+
+        cls.addEventListener('change',function(){
+            box.className = cls.value;
+        });
+
+        
+
+        function show(){
+            box2.classList.add('hidden')
+        };
+        function hide(){
+            box2.classList.remove('hidden')
+        };
+        function toggle(){
+            box2.classList.toggle('hidden')
+        }
+        
+        let count = 0;
+        setInterval(function(){
+            count += 10;
+            box3.style.marginLeft = count + 'px';
+            
+        },1000)
+    </script>
+</body>
+</html>

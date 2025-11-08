@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Message Boxes</h1>
+    <button onclick='showAlert()'>Alert</button>
+    <button onclick='showPrompt()'>Prompt</button>
+    <button onclick='showConfirm()'>Confirm</button>
+    <div id='output'>
+        MyText
+    </div>
+
+    <script>
+        function showAlert(){
+            alert('Hello')
+        }
+        
+        function showPrompt(){
+            let input = prompt('what is your name?');
+            document.getElementById('output').innerHTML = input 
+        }
+
+        function showConfirm(){
+            let isOk = confirm('Are you sure?');
+            
+        }
+        if(isOk){
+            document.getElementById('output').innerHTML = 'Approved';
+        }
+
+        
+    </script>
+    
+</body>
+</html>

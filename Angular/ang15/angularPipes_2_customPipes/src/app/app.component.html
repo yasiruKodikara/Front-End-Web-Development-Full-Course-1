@@ -1,0 +1,14 @@
+<h2>{{'Akon' |shorten}}</h2>
+
+<h2>{{'AkonKonkonkon'| shorten}}</h2>
+
+<h2>{{'testnamtestname'| shorten :4}}</h2>
+
+
+<input type='text' [(ngModel)]="searchVal">
+
+<button (click)="addUser()">AddNewUser</button>
+
+@for(name of names | filter :searchVal ; track name){
+    <h3>{{name}}</h3>
+}

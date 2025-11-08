@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseenter and mouseleave</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>this is a para</p>
+    <script>
+        $('p').mouseenter(function(){
+            $(this).css('background-color','yellow');
+        });
+
+        $('p').mouseleave(function(){
+            $(this).css('background-color','green');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops and Iterations</title>
+</head>
+<body>
+    <ul id="list1">
+
+    </ul>
+
+    <script>
+        let user = {
+            name:'akon',
+            age:20,
+            address:'colombo'
+        }
+
+        //for loop
+        
+        
+        
+
+        for(const data in user){
+            let list1 = document.getElementById('list1');
+            let listItem = document.createElement('li');
+            let text = document.createTextNode(user[data]);
+            listItem.appendChild(text);
+            list1.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>

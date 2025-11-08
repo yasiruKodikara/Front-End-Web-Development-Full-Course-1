@@ -1,0 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    background-image:linear-gradient(to right,white,rgb(0, 195, 255),white);
+}

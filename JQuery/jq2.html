@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+</head>
+<body>
+   <p id="pid">This is a paraa</p>
+   <script>
+
+    $(document).ready(function(){
+        $('#pid').click(function test(){
+        alert('clicked');
+    });
+    })
+
+    //selector |   eg           |        Description
+    //__________________________________________________________________________
+    // *       | $('*')         |select all the elements.
+    // .class  | $('.myClass')  |select all the elements with class = 'myClass'
+    // :first  | $('p:first')   |select the first p element.
+    // :even   | $('tr:even')   |select all ecen tr elements.
+    // el1,el2 | $('div,h1')    |select all div,h1,p elements.
+    // :focus  | $(':focus')    |select the element that currently has focus.
+    // href    | $('[href]')    | select all elements with href attribute.
+    
+
+    
+   </script> 
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+    <style>
+        .textgreen{
+            color:rgb(27, 233, 27);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1 id = 'title'>JS DOM
+    </h1>
+
+    <p class="p1">
+        this is a paragraph
+    </p>
+
+    <p class="p1">
+        this is a paragraph
+    </p>
+
+    <button>ClickME</button>
+
+    <a href="https://www.google.com" id="link1">Google</a>
+
+    <script>
+    let mylink = document.getElementById('link1');
+    
+        //css DOM
+    //mylink.style.color = "red";
+    
+    mylink.classList.add('textgreen');
+
+    //remove css
+   // mylink.classList.remove('textgreen');
+
+//timeStamp 34:28 unit 6
+
+    </script>
+
+
+
+</body>
+</html>

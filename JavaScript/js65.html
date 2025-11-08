@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest and Spread</title>
+</head>
+<body>
+    <script>
+        //ex 1
+        function myFunc1(a,b,c){
+            console.log(`${a},${b},${c}`);
+        }
+
+        myFunc1(1,2,3);
+
+        //Rest
+        //ex2
+
+        function myFunc2(a,...args){
+            console.log(`${a}`);
+            console.log(args);
+        }
+
+        myFunc2(1,2,3,45,56,67);
+
+        //ex3
+        function myFunc2(a,...args){
+            args.forEach(element => {
+                console.log(element);
+            })
+        };
+        myFunc2(1,2,3,45,56,67);
+
+        //spread
+
+        //ex1
+        function myFunc3(a,b,c,d,e,f,g){
+            console.log(a,b,c,d,e,f,g);
+        }
+
+        const arr1 = [1,2,3,4,5,6,7];
+        myFunc3(...arr1);
+
+
+        //destructuring
+        let [a,b] = arr1;
+        console.log(a,b);
+
+        let [c,d,...sub] = arr1;
+        console.log(c,d);
+        console.log(sub);
+
+        //ex2
+
+        const myobject = {
+            name:'fkon',
+            age:34,
+            address :'çolombo'
+        };
+
+        const {name,...rest} = myobject;
+        console.log(name);
+        console.log(rest);
+    </script>
+</body>
+</html>

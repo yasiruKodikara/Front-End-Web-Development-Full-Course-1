@@ -1,0 +1,27 @@
+@mixin my-text {
+    color: red;
+    font-size: 20px;
+    font-weight:bold;
+    border:2px solid yellowgreen;
+    padding:10px;
+}
+
+.h1{
+    @include my-text;
+    margin:auto;
+}
+
+/*
+Syntaxes.........................
+
+@mixin mixin-name {
+    property: value;
+    property: value;
+    property: value;
+}
+
+selecter {
+    @include mixin-name(variables);
+}
+
+*/

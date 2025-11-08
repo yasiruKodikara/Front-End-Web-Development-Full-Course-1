@@ -1,0 +1,17 @@
+/*
+string length syntax
+
+str-length(string)
+*/
+body::after {
+  content: "the length of the string is str-length Hello world characters";
+}
+
+/*quote(string)
+*/
+/*
+str-index(string,substring)
+
+*/
+
+/*# sourceMappingURL=sass5.css.map */

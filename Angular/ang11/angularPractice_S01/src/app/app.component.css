@@ -1,0 +1,5 @@
+.dltbtn{
+    padding:8px;
+    border-radius:7px;
+    background-image: linear-gradient(rgb(0, 0, 0),rgb(255, 0, 0),black);
+}

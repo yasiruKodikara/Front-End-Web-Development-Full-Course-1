@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        //creating an object
+        let student = {
+            name:'Akon',
+            age:20,
+//accessing attributes from a method in same object
+            sayHi:function(){
+                console.log('Hi..'+' my name is'+this.name+'and age is'+this.age)
+            }
+        }
+        student.sayHi();
+
+        let student2 = {
+            name:'Bkon',
+            address:'no34'
+        }
+
+        //object assignment
+
+        Object.assign(student2,student);
+        console.log(student2);
+
+    </script>
+    
+</body>
+</html>

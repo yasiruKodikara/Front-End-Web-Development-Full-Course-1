@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop1</title>
+</head>
+<body>
+    <script>
+        let person1 = {
+        name:'akon',
+        age:20,
+        address:'colombo',
+        subjects:['math','physics'],
+
+        sayHi: function(){
+            console.log('hi iam '+this.name)
+        },
+
+        school:{
+            name:'cs',
+            phone:'123123123'
+        }
+        }
+
+        //object constructor function
+
+        function Person(name,age,addr){
+            this.name = name;
+            this.age = age;
+            this.address = addr;
+            this.sayHi = function(){
+                console.log('hi.iam '+this.name)
+            };
+        }
+
+        //creating a new person
+        let person2 = new Person('bkon',20,'ratnapura');
+        console.log(person2);
+
+        console.log(person2.__proto__);
+
+        let person3 = new Person('ckon',20,'kgalle');
+        console.log(person3);
+
+        person3.sayHello = function(){
+            console.log('hello....(this is from object). iam '+this.name)
+        }
+
+
+        Person.prototype.sayHello = function(){
+            console.log('(this is from prototype)hello iam '+this.name)
+        }
+        
+        person3.sayHello()
+        person2.sayHello()
+
+        //call() without parameters
+
+        const student1 = {
+            fullname:function(){
+                console.log(this.firstname+' '+this.lastname)
+            }
+        }
+        
+        const student2 = {
+            firstname:'akon',
+            lastname:'bkon'
+        }
+        
+        student1.fullname.call(student2)
+
+        //call() with parameters
+
+        const student3 = {
+            fullname:function(start,end){
+                console.log(start+this.firstname+' '+this.lastname+end)
+            }
+        }
+        
+        const student4 = {
+            firstname:'akon',
+            lastname:'bkon'
+        }
+        
+        student3.fullname.call(student4,'sv ',' ev')
+
+        //apply() without parameters
+        
+
+        const student5 = {
+            fullname:function(){
+                console.log(this.firstname+' '+this.lastname)
+            }
+        }
+        
+        const student6 = {
+            firstname:'akon',
+            lastname:'bkon'
+        }
+        
+        student5.fullname.apply(student6)
+
+        //apply() with parameters
+        
+
+        const student7 = {
+            fullname:function(start,end){
+                console.log(start+this.firstname+' '+this.lastname+end)
+            
+            }
+        }
+        
+        const student8 = {
+            firstname:'akon',
+            lastname:'bkon'
+        }
+        
+        student7.fullname.apply(student8,['$','#'])
+
+        //bind()
+        
+
+        const student9 = {
+            fullname:function(){
+                console.log(this.firstname+' '+this.lastname)
+            }
+        }
+        
+        const student10 = {
+            firstname:'akon',
+            lastname:'bkon'
+        }
+        
+        let myF =  student9.fullname.bind(student10)
+        myF()
+
+    </script>
+    
+</body>
+</html>

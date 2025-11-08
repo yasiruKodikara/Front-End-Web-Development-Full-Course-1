@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<!--ng style(method1)old-->
+<h1 [style.color]='isActive?"red":"green"' [style.text-transform]='isActive?"uppercase":"lowercase"'>yasiruKodikara</h1>
+
+<!--ng style(method1)new-->
+<h2 [ngStyle]="{'color':isActive?'red':'blue','text-transform':isActive?'uppercase':'lowercase'}">hello world</h2>
+
+<!--ng style(method2-old v-lets write the condition in .ts file)-->
+<h2 [style.color]="getActiveColor" [style.text-transform]="getActiveCase">Hello world_3old</h2>
+
+<!--ng style(method2-new v-lets write the condition in .ts file)-->
+<h2 [ngStyle]="{'color':getActiveColor,'text-transform':getActiveCase}">Hellow world_3new</h2>
+
+<!--using class binding-->
+<h2 [class.active] = 'isActive' [class.nonactive]='!isActive'>Hello world_4 (class binding)</h2>
+
+<!--ngClass-->
+<h2 [ngClass]="{'active':isActive,'nonactive':!isActive}">Hello world_4 (ng class)</h2>
+
+<!--Custom Directives-->
+<!--lets create changing background color according to mouse hover-->
+
+<!--create a custom directive-->
+<!--ng genarate directive directives/directive_name-->

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <button class='btn1'>HIDE</button>
+    <button class='btn2'>SHOW</button>
+    <button class='btn3'>TOGGLE</button>
+
+    
+    <p>THIS IS A PARAGRAPH</p>
+    
+    
+
+    <script>
+        $('.btn1').click(function(){
+            $('p').hide(1000,function(){$('.btn1').css('color','red');}); //$(selector).hide(speed,callback) 
+        });                    //callback and speed are optional
+                            //callback() defines a function to execute after the effect
+        $('.btn2').click(function(){
+            $('p').show(1000);
+        });
+
+        $('.btn3').click(function(){
+            $('p').toggle(1000);
+        });
+    </script>
+</body>
+</html>

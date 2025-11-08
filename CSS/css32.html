@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horizontal nav bar</title>
+    <style>
+        header{
+            background-color: blueviolet;
+            padding: 10px;
+            text-align: center;
+            top:3px;
+            position:sticky;
+        }
+         ul{
+            list-style-type: none;
+            margin:0;
+            padding:0;
+            
+        }
+        ul a{
+            text-decoration: none;
+            background-color: blueviolet;
+            
+            width:90px;
+            padding:10px;
+            color:white;
+            border-radius:5px;
+        }
+        li{
+            display:inline; /*or float:left;*/
+        }
+        li a:hover{
+            background-color: rgb(173, 85, 255);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a class="Home" href="#">Home</a></li>
+            <li><a class="About" href="#">About</a></li>
+            <li><a class="Services" href="#">Services</a></li>
+            <li><a class="Contact" href="#">Contact</a></li>
+        </ul>
+    </header>
+    
+    <div class="e1" style='height: 3000px;'></div>
+</body>
+</html>

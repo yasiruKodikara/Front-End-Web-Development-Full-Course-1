@@ -1,0 +1,2 @@
+1. login.component.ts-----------
+    1 import the component

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+    
+    .div1{
+        padding: 5px;
+        text-align: center;
+        background-color: #bbff00;
+        border: solid 1px #000000;
+        border-radius:5px;
+        padding: 50px;
+        
+    }
+
+    </style>
+</head>
+<body>
+    <button class='btn2'>Click Me To slideUp</button>
+    <button class='btn1'>Click Me To slideDown</button>
+    <button class='btn3'>Click Me To slideToggle</button>
+
+    
+    <div class="div1"><p>HelloWorld</p></div>
+    
+    
+
+    <script>
+        $('.btn1').click(function(){
+            $('.div1').slideDown(1000);
+        });
+
+        $('.btn2').click(function(){
+            $('.div1').slideUp(1000);
+        });
+
+        $('.btn3').click(function(){
+            $('.div1').slideToggle(1000,function(){$('.div1').css('background-color','red')});
+        });
+    </script>
+</body>
+</html>

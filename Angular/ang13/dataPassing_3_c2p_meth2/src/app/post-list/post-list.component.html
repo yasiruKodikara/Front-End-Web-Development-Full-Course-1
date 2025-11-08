@@ -1,0 +1,9 @@
+<p>post-list works!</p>
+
+<app-add-post (postTitleEmitter) = 'addNewPostFromChild($event)'></app-add-post>
+
+@for(post of posts;track post){
+    <app-post-list-item [postListItemTitle]="post"></app-post-list-item>
+}
+
+<app-post-list-item></app-post-list-item>

@@ -1,0 +1,5 @@
+.gitignore - share code with others.
+angular.json - haert of the project
+package.json - 
+README.md - auto generated,we can use to comment.
+final three json files - .ts files

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postition_1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /*position static*/
+        .div1{
+            border:2px solid red;
+            border-radius: 6px;
+            position:static;
+        }
+    /*position relative*/
+        .div2{
+            border:2px solid rgb(255, 0, 85);
+            border-radius: 6px;
+            position:relative;
+            top:100px;
+            left:40px;
+        }
+    /*position fixed*/
+    /*minimize and scroll to checkout this */
+        .div3{
+            border:2px solid rgb(0, 255, 0);
+            border-radius: 6px;
+            position:fixed;
+            top:100px;
+            left:40px;
+        }
+    /*position absolute*/
+        .div4{
+            border:2px solid rgb(0, 0, 255);
+            border-radius: 6px;
+            position:absolute;
+            top:400px;
+        }
+    /*position sticky in css14.html*/       
+    
+        
+    </style>
+</head>
+<body>
+    <!--default position value -static -->
+  
+    <br><br>
+    <div class="div1">
+        <h1>position:static;</h1>
+        <p>This is a sample paragraph to demonstrate the use of position in CSS. 
+            By setting a position value of static, the element will be positioned according to the
+             normal flow of the document. This means that the element will appear in the order it
+              is written in the HTML, with no special positioning applied.</p>
+    </div>
+    <br>
+    <div class="div2">
+        <h1>position:relative;</h1>
+        <p>This is a sample paragraph to demonstrate the use of position in CSS. 
+            By setting a position value of static, the element will be positioned according to the
+             normal flow of the document. This means that the element will appear in the order it
+              is written in the HTML, with no special positioning applied.</p>
+    </div>
+    <br>
+    <div class="div3">
+        <h1>position:fixed;</h1>
+        <p>This is a sample paragraph to demonstrate the use of position in CSS. 
+            By setting a position value of static, the element will be positioned according to the
+             normal flow of the document. This means that the element will appear in the order it
+              is written in the HTML, with no special positioning applied.</p>
+    </div>
+   
+    <br>
+    <div class="div4">
+        <h1>position:absolute;</h1>
+        <p>This is a sample paragraph to demonstrate the use of position in CSS. 
+            By setting a position value of static, the element will be positioned according to the
+             normal flow of the document. This means that the element will appear in the order it
+              is written in the HTML, with no special positioning applied.</p>
+    </div>
+    <br>
+    
+    
+</body>
+</html>

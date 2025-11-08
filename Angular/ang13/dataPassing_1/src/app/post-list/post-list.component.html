@@ -1,0 +1,25 @@
+<p>post-list works!</p>
+
+
+
+
+
+
+<h1>Posts</h1>
+
+@for(post of posts ;track post){
+    <app-post-list-item [postListItemTitle2]="post"></app-post-list-item>
+}
+
+
+<app-post-list-item [postListItemTitle]='postListTitle'></app-post-list-item>
+
+
+
+<input type='text' [(ngModel)]='postTitle3'>
+
+<button (click)='addNewPost()'>Add New Post</button>
+
+@for(post of posts2 ; track post){
+    <app-post-list-item [postListItemTitle3] = 'post'></app-post-list-item>
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js libraries(user defined library)</title>
+    <script src="js57.js"></script>
+</head>
+<body>
+    <div id='test'>
+        some text
+        <p id="test2">some text</p>
+        <input type='text' id="myInput">
+        <ul id="myList"></ul>
+    </div>
+    <script>
+        inHtml('#test2','Hiiiiii');
+        val('#myInput','Hello');
+        addLI('#myList','Item 1');
+        addLI('#myList','Item 2');
+        addEvent('#myInput','keyup',function(){
+            alert('key uped');
+        });
+
+    </script>
+</body>
+</html>

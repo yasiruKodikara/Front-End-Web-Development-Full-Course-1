@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Game</title>
+</head>
+<body id = 'body'>
+    <h1>TYPING GAME</h1>
+    <div id="gameSection">
+        <h2 id = 'display'>
+            KEY            
+        </h2>
+        correct:<span id="correct">0</span>
+        Wrong:<span id="wrong">0</span>
+    </div>
+    <script>
+        function randomLetter(){
+            const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+            const randomIndex = Math.floor(Math.random()*alphabet.length);
+            return alphabet[randomIndex];
+        }
+
+        const display = document.getElementById('gameSection');
+
+        const correct = document.getElementById('correct');
+
+        const wrong = document.getElementById('wrong');
+
+
+
+
+        //Display section
+        display.innerHTML = randomLetter();
+
+        document.getElementById('body').addEventListener('keyup',function(e){
+            if(display.innerHTML == e.key){
+                correct.innerHTML++;
+            }else{
+                wrong.innerHTML++;
+            }display.innerHTML = randomLetter()
+        })
+        
+    </script>
+</body>
+</html>

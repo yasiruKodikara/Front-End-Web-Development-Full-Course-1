@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width:200px;
+            height:200px;
+        }
+        img[title$='red']{
+            border: 5px solid red;
+        }
+        img[title*='gray']{
+            border: 5px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <img src="3481577.jpg" alt="image" title='red circle'>
+    <img src="3481577.jpg" alt="image" title='blue circle-red'>
+    <img src="3481577.jpg" alt="image" title='yellow circle'>
+    <img src="3481577.jpg" alt="image" title='yellow gray circle'>
+    <img src="3481577.jpg" alt="image" title='yellow circle gray'>	
+</body>
+</html>

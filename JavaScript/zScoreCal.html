@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Z-Score Calculator</title>
+<style>
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+.calculator {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.calculator label, .calculator input, .calculator button, .calculator #result {
+  display: block;
+  margin-bottom: 10px;
+  width: calc(100% - 22px);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.calculator button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.calculator button:hover {
+  background-color: #45a049;
+}
+
+.calculator #result {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="calculator">
+  <h2>Z-Score Calculator</h2>
+  <label for="score">Score (X):</label>
+  <input type="number" id="score" placeholder="Enter Score">
+
+  <label for="mean">Mean (μ):</label>
+  <input type="number" id="mean" placeholder="Enter Mean">
+
+  <label for="sd">Standard Deviation (σ):</label>
+  <input type="number" id="sd" placeholder="Enter Standard Deviation">
+
+  <button onclick="calculateZScore()">Calculate</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function calculateZScore() {
+  const score = parseFloat(document.getElementById("score").value);
+  const mean = parseFloat(document.getElementById("mean").value);
+  const sd = parseFloat(document.getElementById("sd").value);
+  const resultDiv = document.getElementById("result");
+
+  if (isNaN(score) || isNaN(mean) || isNaN(sd) || sd === 0) {
+    resultDiv.textContent = "Please enter valid numbers. Standard deviation must be greater than zero.";
+    return;
+  }
+
+  const zScore = (score - mean) / sd;
+  resultDiv.textContent = `Z-Score: ${zScore.toFixed(2)}`;
+}
+</script>
+
+</body>
+</html>

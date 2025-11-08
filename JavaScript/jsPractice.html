@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+      
+
+    </style>
+</head>
+<body>
+
+    
+
+    <h1>CheckBoxValidation</h1>
+    <form action="" method="" onsubmit="return validation()">
+        <input type="checkbox" name="c1" id="js" value="'js">JavaScript<br>
+        <input type="checkbox" name="c2" id="jq" value="Jquery">JQuery<br>
+        <input type="checkbox" name="c3" id="Ajs" value="Ajs">AngularJavaScript<br>
+        <input type="checkbox" name="c4" id="Njs" value="Njs">NodeJavaScript<br>
+        <input type="submit" name="s1"  value="SUBMIT">
+    </form>
+    
+
+    <script>
+        try{
+            let myinput = document.getElementById('input1').value;
+            console.log(myinput)
+        }
+        catch(e){
+            console.log(e.name);
+            console.log(e.message);
+        }
+        finally{
+            console.log('its run always')
+        }
+    </script>
+
+    
+</body>
+</html>

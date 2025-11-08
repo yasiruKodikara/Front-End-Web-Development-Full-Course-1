@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextValidations</title>
+</head>
+<body>
+    Mobile Number:<input type="text" name="mn" id="num"  placeholder="">
+    <button onclick="validation()">SUBMIT</button>
+
+    <h3 id="msg"></h3>
+    <script>
+        function validation(){
+            let phone = document.getElementById('num').value ;
+            
+            let numLength = phone.length;
+            let firstNums = phone.substr(0,2);
+            let lastNums = phone.substr(numLength-9,9);
+            let num;
+
+            if (numLength < 9){
+                alert('Numbers missing! please check');
+                document.getElementById('msg').innerHTML = 'invalid number';
+            }
+            else if(numLength == 9){
+                alert('Number validation successfull!');
+                num = '94'+ phone;
+                document.getElementById('msg').innerHTML = num;
+            }
+            else if(numLength==10){
+                num = '94' + lastNums;
+                document.getElementById('msg').innerHTML = num;
+            }
+            else if(numLength>11){
+                alert('Numbers out of length! please check');
+                document.getElementById('msg').innerHTML = 'invalid number';
+            }
+            else if(numLength == 11 && firstNums!=94){
+                alert('Invalid number! please check');
+                document.getElementById('msg').innerHTML = 'invalid number';
+            }
+            else if(numLength==11 && firstNums==94){
+                num = phone;
+                alert('Number validation successfull!');
+                document.getElementById('msg').innerHTML = num;
+            }
+            else{
+                alert('Invalid number! please check');
+                document.getElementById('msg').innerHTML = 'invalid number';
+            }
+        }
+
+        
+        
+        
+    </script>
+</body>
+</html>

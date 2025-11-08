@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorGradient</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .linear1{
+            width:300px;
+            height: 300px;
+            background-color: red;
+            background-image: linear-gradient(to right,red,black);
+        }
+        .linear2{
+            width:300px;
+            height: 300px;
+            background-color: red;
+            background-image: linear-gradient(to bottom right,red,black,green,blue);
+        }
+        .linear3{
+            width:300px;
+            height: 300px;
+            background-color: red;
+            background-image: repeating-linear-gradient(to  right,red 5%,black 5%);
+        }
+        .radial1{
+            width:300px;
+            height: 300px;
+            background-color: red;
+           background-image:radial-gradient(red,black)
+        }
+        .radial2{
+            width:300px;
+            height: 300px;
+            background-color: red;
+           background-image:radial-gradient(circle,red,black)
+        }
+        .radial3{
+            width:300px;
+            height: 300px;
+            background-color: red;
+            background-image:repeating-radial-gradient(closest-side at 60% 55% red 55%,blue 60%);
+        }
+        .conic1{
+            width:300px;
+            height: 300px;
+            background-color: red;
+            background-image:conic-gradient(red,black);
+        }
+    </style>
+</head>
+<body>
+    <div class="linear1"></div><br>
+    <div class="linear2"></div><br>
+    <div class="linear3"></div><br>
+    <div class="radial1"></div><br>
+    <div class="radial2"></div><br>
+    <div class="radial3"></div><br>
+    <div class="conic1"></div><br>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+
+<button (click)='addNewUser()'>Add User</button>
+
+<ul>
+    @for(user of users;track user){
+        <li>{{user.id}} | {{user.name}} | {{user.age}} <button class='dltbtn' (click)="deleteUser(user)">Delete</button></li>
+    }
+</ul>
+
+<app-navbar></app-navbar>

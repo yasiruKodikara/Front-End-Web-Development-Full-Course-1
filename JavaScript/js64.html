@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distructuring</title>
+</head>
+<body>
+    <script>
+        const arr1 = ['akon','bkon','ckon','dkon']
+
+        let [na1,na2,na3,na4,na5='test'] = arr1;
+        
+        console.log(na1,na2,na3,na4,na5);
+
+        //swap
+        let a = 10;
+        let b =20;
+
+        [a,b] = [b,a];
+        console.log(`a = ${a} b = ${b}`);
+
+        //ignore some values
+
+        let [name1,,name2] = arr1;
+        console.log(name1,name2);
+
+        //object
+
+        const myobj = {
+            name: 'akon',
+            age: 25,
+            city: 'dhaka'
+        }
+
+        let {name,age,city} = myobj;
+        console.log(name,age,city);
+
+        let {name:myname,age:myage,city:mycity} = myobj;
+        console.log(myname,myage,mycity);
+
+        //nested object
+
+        const student = {
+            name:'ekon',
+            age:30,
+            city:'LA',
+            education:{
+                degree:'CS',
+                school:'city college'
+            }
+        }
+
+        let {name:stname,age:stage,city:stcity,education:{degree,school}} = student;
+        console.log(stname,stage,stcity,degree,school);
+
+        //usage of destructuring in functions
+
+        function myFunc({name,age}){
+            console.log({name,age})
+        }
+        myFunc(student);
+    </script>
+</body>
+</html>

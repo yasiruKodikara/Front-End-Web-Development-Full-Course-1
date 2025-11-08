@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        //creating an object
+        let student = {
+            name:'Akon',
+            age:20,
+
+            sayHi:function(){
+                console.log('Hi..')
+            }
+        }
+
+
+        //calling methods
+        student.sayHi();
+        console.log(student.name);
+        console.log(student.age);
+
+        student.name = 'yasiru';
+        console.log(student.name);
+        
+        student.address = 'no34';
+        console.log(student.address);
+
+        //get object info
+        console.log(student)
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        //creating an object
+        let student = {
+            name:'Akon',
+            age:20,
+//accessing attributes from a method in same object
+            sayHi:function(){
+                console.log('Hi..'+' my name is'+this.name+'and age is'+this.age)
+            }
+        }
+        student.sayHi();
+
+        //common object methods
+
+        //get the keys
+        console.log(Object.keys(student));
+
+        //get the values
+        console.log(Object.values(student));
+
+        //get entries
+        console.log(Object.entries(student));
+        
+
+        
+
+    </script>
+    
+</body>
+</html>

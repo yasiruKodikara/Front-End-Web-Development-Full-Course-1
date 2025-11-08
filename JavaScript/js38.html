@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RadioValidation</title>
+</head>
+<body>
+    <script>
+        function validation(){
+            let valid = false;
+
+            if (document.getElementById('js').checked){
+                valid = true;
+            }else if(document.getElementById('jq').checked){
+                valid = true;
+            }else if(document.getElementById('Ajs').checked){
+                valid = true;
+            }else if(document.getElementById('Njs').checked){
+                valid = true;
+            }
+            
+            if(valid){
+                alert('Validation Successfull');
+            }else{
+                alert('Please select atleast one technology!');
+                return false;
+            }
+        }
+    </script>
+    <h1>RadioValidation</h1>
+    <form action="" method="" onsubmit="return validation()">
+        <input type="radio" name="c" id="js" value="'js">JavaScript<br>
+        <input type="radio" name="c" id="jq" value="Jquery">JQuery<br>
+        <input type="radio" name="c" id="Ajs" value="Ajs">AngularJavaScript<br>
+        <input type="radio" name="c" id="Njs" value="Njs">NodeJavaScript<br>
+        <input type="submit" name="s1"  value="SUBMIT">
+    </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breadcrumb</title>
+</head>
+
+<style>
+    .breadcrumb{
+        padding:10px;
+        font-family:sans-serif;
+    }
+    .breadcrumb_item{
+        display:inline-block;
+
+    }
+    .breadcrumb_item:not(:last-of-type)::after{
+        content:'/';
+        margin:0 5px;
+        color:gray;
+    }
+    .breadcrumb_link{
+        text-decoration:none;
+        color:rgb(83, 83, 83);
+    }
+
+    .breadcrumb_link:hover{
+        text-decoration:underline;
+        color:rgb(83, 83, 83);
+    }
+
+    .breadcrumb_item--avtive{
+        color:blue;
+        font-weight:500;
+    }
+
+</style>
+<body>
+    
+    <ul class='breadcrumb'>
+        <li class='breadcrumb_item'>
+            <a href='#' class='breadcrumb_link'>Home</a>
+        </li>
+        <li class='breadcrumb_item'>
+            <a href='#' class='breadcrumb_link'>Media</a>
+        </li>
+        <li class='breadcrumb_item'>
+            <a href='#' class='breadcrumb_link'>Photos</a>
+        </li>
+        <li class='breadcrumb_item'>
+            <a href='#' class='breadcrumb_link--active'>Nature</a>
+        </li>
+    </ul>
+
+</body>
+</html>

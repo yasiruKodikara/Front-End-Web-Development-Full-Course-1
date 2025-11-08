@@ -1,0 +1,88 @@
+<h1>{{title}}</h1>
+<!--older syntax-->
+<!--
+<ng-template #infoiftrue>
+  <h1>Welcome {{name}}</h1>
+</ng-template>
+
+<ng-template #infoiffalse>
+  <h1>Please Login!</h1>
+</ng-template>
+
+<div *ngIf="isLoggedIn;then infoiftrue else infoiffalse"></div>
+-->
+
+<hr>
+
+<!--newer syntax-->
+@if(isLoggedIn){
+  <h1>Welcome {{name}}</h1>
+}
+@else {
+  <h1>Please Login!</h1>
+}
+
+<hr>
+
+<!--Ex2 older v-->
+<h3 *ngIf="status == 'success'; else infoiffailed">Request handled Successful</h3>
+<ng-template #infoiffailed>
+  <h3>
+    Request handled Fail</h3>
+</ng-template>
+
+<!--Ex2 newer v-->
+@if(status=='success'){
+  <h3>Request handled Successful</h3>
+}
+@else {
+  <h3>Request handled Fail</h3>
+}
+
+<hr>
+
+<!--Ex3 older v-->
+
+<ng-template #passtemp>
+  <h4>pass</h4>
+</ng-template>
+
+<ng-template #failtemp>
+  <h4>Fail</h4>
+</ng-template>
+
+<div *ngIf="marks>50;then passtemp else failtemp"></div>
+
+<!--Ex3 newer v-->
+@if(marks>50){
+  <h4>Pass</h4>
+}
+@else{
+  <h4>Fail</h4>
+}
+
+<hr>
+
+<!--Ex4 older v-->
+<button (click)="clickBtn()">Toggle</button>
+<h2 *ngIf="isVisible">I love Angular 18</h2>
+
+<!--Ex4 newer v-->
+@if(isVisible){
+  <h2>I love Angular 18</h2>
+}
+
+<!--Ex5 newer v-->
+@if(role=='user'){
+  <h4>He is the user</h4>
+}
+@else if(role=='admin'){
+  <h4>He is the admin</h4>
+}
+@else{
+  <h4>He is the normal guy</h4>
+}
+
+
+<h1 *ngIf='isLoggedIn && role=="admin" ' >hello</h1>
+

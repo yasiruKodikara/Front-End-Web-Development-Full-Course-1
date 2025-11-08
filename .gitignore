@@ -1,0 +1,32 @@
+# Ignore all node_modules in the entire web_dev directory
+web_dev/**/node_modules/
+# Ignore all node_modules folders inside your Angular and TypeScript projects
+web_dev/Angular/ang1/node_modules/
+web_dev/Angular/ang2/ang2/node_modules/
+web_dev/Angular/ang3/ang3_DataBinding_1/node_modules/
+web_dev/Angular/ang4/cssBootstrap_1/node_modules/
+web_dev/Angular/ang5/cssBootstrap_2_twoColumnLayout/node_modules/
+web_dev/Angular/ang6/cssBootstrap_threeColumnLayout/node_modules/
+web_dev/Angular/ang7/cssBootstrap_navbar/node_modules/
+web_dev/Angular/ang8/ang7_eventBinding/node_modules/
+web_dev/Angular/ang9/directives_1/node_modules/
+web_dev/Angular/ang10/directives_2/node_modules/
+web_dev/Angular/ang11/angularPractice_S01/node_modules/
+web_dev/Angular/ang12/directives_3/node_modules/
+web_dev/Angular/ang13/dataPassing_1/node_modules/
+web_dev/Angular/ang13/dataPassing_2_c2p/node_modules/
+web_dev/Angular/ang13/dataPassing_3_c2p_meth2/node_modules/
+web_dev/Angular/ang14/angPractice_s02/node_modules/
+web_dev/Angular/ang14/angPractice_s03/node_modules/
+web_dev/Angular/ang15/angularPipes_1/node_modules/
+web_dev/Angular/ang15/angularPipes_2_customPipes/node_modules/
+web_dev/Angular/ang16/angLifeCycleHooks_1/node_modules/
+web_dev/Angular/ang16/angLifeCycleHooks_2/node_modules/
+web_dev/Angular/ang17/angReactiveForms_1/node_modules/
+web_dev/Angular/ang18/angularServices_1/node_modules/
+web_dev/Angular/ang19/templateDrivenForms_1/node_modules/
+web_dev/Angular/ang20/routing_1/node_modules/
+web_dev/Angular/ang21/angRouting_1/node_modules/
+web_dev/Angular/ang22/angRoutings_1/node_modules/
+
+

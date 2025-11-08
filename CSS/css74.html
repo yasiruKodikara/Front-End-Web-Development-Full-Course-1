@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css user interface</title>
+    <style>
+        .container1{
+            border:1px solid red;
+            padding:20px;
+            width:400px;
+            resize:horizontal; /*virticle,both,horizontal*/
+            overflow:auto;
+        }
+        .container2{
+            border:1px solid red;
+            padding:20px;
+            width:400px;
+            resize:none; /*virticle,both,horizontal*/
+            overflow: auto;
+        }
+
+        .container3{
+            border:1px solid red;
+            padding:20px;
+            width:400px;
+            outline:2px solid blue;
+            outline-offset:4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit minima reprehenderit, cum nobis quis dolores vero! Ea quas deserunt excepturi ex maxime non vero accusantium nostrum labore porro? Voluptatibus, id!</p>
+    </div>
+    <br>
+    <div class="container2">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit minima reprehenderit, cum nobis quis dolores vero! Ea quas deserunt excepturi ex maxime non vero accusantium nostrum labore porro? Voluptatibus, id!</p>
+    </div>
+    <br>
+    <div class="container3">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit minima reprehenderit, cum nobis quis dolores vero! Ea quas deserunt excepturi ex maxime non vero accusantium nostrum labore porro? Voluptatibus, id!</p>
+    </div>
+</body>
+</html>

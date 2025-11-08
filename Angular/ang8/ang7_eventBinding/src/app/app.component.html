@@ -1,0 +1,21 @@
+<!--eventBinding-->
+<button (click)="btnclick()">clickMe</button>
+<br>
+
+<input (keyup)="inputEvent1($event)" type="text" id="in1" >
+
+<input (keydown)="inputEvent2($event)" type="text" id="in2">
+
+<br><br><hr>
+<input (keypress)="keyPressed1(inputRef)" #inputRef>
+
+<input (keypress)="keyPressed2(inputRef)" #inputRef id="Name">
+
+<br>
+
+<h1>{{input_value_1}}</h1>
+
+<!--TwoWayDataBinding-->
+<hr><hr>
+<input [(ngModel)] = 'twoWayValue1'>
+<h2>{{twoWayValue1}}</h2>

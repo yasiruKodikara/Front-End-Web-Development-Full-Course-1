@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch statement</title>
+</head>
+<body>
+    <script>
+        function checkInput(){
+            let district = document.getElementById('dis').value;
+
+            switch(district){
+                case 'colombo':
+                    alert('in colombo');
+                    break;
+
+                case 'gampaha':
+                    alert('near colombo');
+                    break;
+
+                default:
+                    alert('some other district');
+            }
+        }
+    </script>
+    Name:
+    <input type="text" name='txt1' id='dis'>
+    <button onclick="checkInput()">ClickMe</button>
+</body>
+</html>

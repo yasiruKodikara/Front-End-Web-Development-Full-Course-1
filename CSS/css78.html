@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive web designing _2(grid view)</title>
+    <style>
+       /*
+       responsive rules
+
+       1.dont give fixed widths to each elements.(just give relative widths).
+       2.use media queries to change the layout of the page.
+       3.use viewport meta tag.
+         4.use relative units like %,em,rem.
+       */
+
+       *{
+           box-sizing: border-box;
+       }
+       .col1{
+        width:8.33%;
+       }
+       .col2{
+        width:16.66%;
+       }
+        .col3{
+          width:25%;
+       }  
+      
+        .col4{
+            width:33.33%;
+        }
+        .col5{
+            width:41.66%;
+        }
+        .col6{
+            width:50%;
+        }
+        .col7{
+            width:58.33%;
+        }
+        .col8{
+            width:66.66%;
+        }
+        .col9{
+            width:75%;
+        }
+        .col10{
+            width:83.33%;
+        }
+        .col11{
+            width:91.66%;
+        }
+        .col12{
+            width:100%;
+        }
+        [class *='col']{
+            float: left;
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class='row'>
+        <div class='col4'>d</div>
+        <div class='col4'>d</div>
+        <div class='col4'>d</div>
+
+    </div>
+</body>
+</html>

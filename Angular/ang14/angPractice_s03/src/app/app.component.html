@@ -1,0 +1,56 @@
+<app-login></app-login>
+<h1>{{title}}</h1>
+<h2>{{2+5}}</h2>
+
+<!--using property binding-->
+<img [src]='imgurl'>
+<hr>
+<!--using string interpolation-->
+<img src={{imgurl}}>
+<hr>
+
+<button [disabled] = 'isDisabled'>clickME</button>
+<hr><hr>
+
+<!--attribute binding-->
+<button [attr.aria-label]='ariaLabelTxt'>AttributeBinding</button>
+<hr>
+<table>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+    </tr>
+    <tr>
+        <td>Akon</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Bkon</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Ckon</td>
+        <td>20</td>
+    </tr>
+    <tr><!--using property binding-->
+        <td [colSpan]="colSpanSize">sum of the ages:60</td>
+    </tr>
+
+</table>
+
+<hr>
+
+<!--style binding-->
+<h3 [style.color]='color' [style.background-color]='bgcolor'>{{title}}</h3>
+
+<h3 [class.myh3]="true">{{title}}</h3>
+
+@if(check){
+    <h3 [class.myh3]="true">{{title}}</h3>
+}
+@else{
+    <h3 [class.myh4]="true">{{title}}</h3>
+}
+<h3 [style.color] = "isActive ? 'red' :'blue' "  [style.background-color] = 'textcolor'>{{title2}}</h3>
+
+<h3 [class.myh4] = 'name=="akon"'>{{title}}</h3>

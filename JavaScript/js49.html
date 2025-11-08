@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop4(customize getter and setter)</title>
+</head>
+<body>
+    <script>
+        //class
+
+        class Person{
+            constructor(name,age,hobbies){
+                this.name = name;
+                this.age = age;
+                this.hobbies = hobbies;
+            }
+
+            showInfo(){
+                console.log('hi iam '+this.name+' iam '+this.age+' years old')
+            }
+
+            static sayHi(){
+                console.log('hi.this is a static method')   //static method
+            };
+
+            get name(){
+                return 'My name is ' +this._name ;
+            }
+
+            set name(input){
+                this._name ='Mr. '+ input
+            }
+        }
+
+        let user1 = new Person('akon',20,['reading','writing']);
+
+        
+        //getter
+        console.log(user1.name);
+
+        user1.showInfo()
+
+        
+
+  
+    </script>
+</body>
+</html>

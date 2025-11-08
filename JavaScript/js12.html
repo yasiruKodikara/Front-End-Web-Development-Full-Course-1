@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    
+    <h1 id = 'title'>JS DOM
+    </h1>
+
+    <p class="p1">
+        this is a paragraph
+    </p>
+
+    <p class="p1">
+        this is a paragraph
+    </p>
+
+    <button>ClickME</button>
+
+    <script>
+        //select the element
+        let titleElement = document.getElementById('title');
+        console.log(titleElement);
+        console.log(titleElement.innerHTML);
+
+        //OR
+        let tE2 = document.getElementsByClassName('p1');
+        console.log(tE2);
+
+        //change the element
+        titleElement.innerHTML = 'changed';
+
+        console.log(tE2[0]);
+        console.log(tE2[1]);
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Eduction</title>
+    <script src="https://kit.fontawesome.com/94b09f8a0a.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        
+        header, footer {
+            /*background-color: #9deff5;) */
+            background: linear-gradient(to right, #5fecff73, #7bfe91);
+            padding: 10px;
+            text-align: center;
+            border-radius:5px;
+            width:auto;
+            backdrop-filter:blur(8px);
+            
+            
+            
+
+            
+            
+        }
+        header {
+            top: 7px; /* Add this line */
+            position:sticky;
+            
+           
+            
+            
+        }
+        footer {
+            bottom: 0; /* Add this line */
+        }
+        nav {
+            margin: 10px 0;
+            
+
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            
+            
+        }
+
+        h1{
+            color:white;
+            font-size:90px;
+        }
+        h1:hover{
+            color:white;
+            font-size:90px;
+            filter:blur(0.5px)
+        }
+        
+        p {
+            color: #666;
+        }
+        body{
+            background-color: black;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color:black;
+            font-weight:bold;            
+        }
+
+       .lgbtn1{
+            width:70px;
+            padding:5px;
+            border-radius:5px;
+            text-decoration:none;
+            background: linear-gradient(to right, #5fecff, #7bfe91);
+        }
+
+        
+        .lgbtn2{
+            width:70px;
+            padding:5px;
+            border-radius:5px;
+            background: linear-gradient(to right, #5fecff, #7bfe91);
+        }
+        .lgbtn1 a{
+            text-decoration:none;
+            color:black;
+            font-weight:bold;  
+
+        }
+        .lgbtn2 a{
+            text-decoration:none;
+            color:black;
+            font-weight:bold;  
+        }
+        nav ul li a:hover{
+            text-decoration: none;
+            background: linear-gradient(to right, #5fecff, #7bfe91);
+            font-weight:bold;
+            border-radius:5px;
+            
+        }
+        .img1 img {
+            width: 100%; /* Make the image take up 100% of the container's width */
+            height: auto; /* Maintain the aspect ratio */
+            object-fit: cover; /* Ensure the image covers the container */
+            max-width: 1400px; /* Set a maximum width */
+            max-height: 300px; /* Set a maximum height */ 
+}
+        .content1{
+            color:white;
+            text-align: center;
+        }
+
+        .btn{
+            width:300px;
+            padding:20px;
+            color:rgb(255, 255, 255);
+            font-weight: bold;
+            font-size:20px;
+            border-radius: 10px;
+            background-color:  #003366;
+            border:3px solid rgb(255, 255, 255);
+            
+
+        }
+
+        .btn:hover{
+            width:300px;
+            padding:20px;
+            color:rgb(0, 0, 0);
+            font-weight: bold;
+            font-size:20px;
+            border-radius: 10px;
+            background: linear-gradient(to right, #5fecff, #7bfe91);
+            border:3px solid rgb(255, 255, 255);
+            filter:blur(1px);
+            letter-spacing: 3px;
+        }
+        .btn a{
+            text-decoration: none;
+            color:white;
+        }
+        .content3 ul{
+            color:rgb(104, 104, 104);
+        }
+        
+        .content4 table td{
+            padding:30px 50px 30px 50px;
+            width:auto;
+        }
+        hr{
+            color: linear-gradient(to right, #5fecff, #7bfe91);
+        }
+
+        .innerimg{
+            width:300px;
+            border-radius: 5px;
+
+        }
+        .footcont1 ul li{
+            list-style-type:none;
+        }
+        .fa-solid{
+            padding:3px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="test()"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#">Tutors</a></li>
+                <li><a href="#">Tute Curior Service</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+               
+               <li><button class="lgbtn1"><a href="login.html">Login</a></button>
+                <button class="lgbtn2"><a href="#">Register</a></button>
+               </li> 
+            </ul>
+        </nav>
+    </header>
+  
+    <main>
+        
+        <div class="container">
+                <h1>SCIENCE EDUCATION ACADEMY</h1>
+            <div class="img1">
+             <img src="2867481.jpg">
+            </div>
+            <br><br>
+            <div class="content1">
+                <h3>Explore Your Favorite Science Subjects</h3><br><br>
+            </div>
+            <br>
+            <center>
+            <div class="content2">
+                <button class="btn" onclick="maths()"><a href='mathpage.html'>Mathematics</a></button>
+                <button class="btn" onclick="phy()"><a href='phypage.html'>Physics</a></button>
+                <button class="btn" onclick="chemi()"><a href='chemipage.html'>Chemistry</a></button>
+                <button class="btn" onclick="com()"><a href='compage.html'>Computer Science</a></button>
+            </div>
+            </center>
+            <br>
+            <div class="content3">
+                <p id="mainPara">
+                    Science is the systematic pursuit of knowledge about the natural world through observation and experimentation. It encompasses a vast array of disciplines, from the microscopic wonders of biology to the cosmic mysteries of astronomy. Science drives innovation, fuels technological advancements, and helps us understand the fundamental principles that govern our universe. By fostering curiosity and critical thinking, science empowers us to solve complex problems, improve our quality of life, and make informed decisions about our future. Whether exploring the depths of the ocean or the far reaches of space, science is a journey of discovery that continually expands our horizons.
+                    <br><br>
+                <!--<b>Key Scientific Disciplines:</b>
+            
+                <ul>
+                    <li>Physics: The study of matter, energy, and the fundamental forces of nature.</li>
+                    <li>Chemistry: The study of substances, their properties, and how they interact.</li>
+                    <li>Biology: The study of living organisms and their interactions with the environment.</li>
+                    <li>Astronomy: The study of celestial objects and the universe as a whole.</li>
+                    <li>Earth Science: The study of the Earth's structure, properties, processes, and history.</li>
+                </ul> -->                
+                </p>
+                <!--<hr>-->
+                <br><br>
+                <center>
+                <h3 style="color:white;">Contents</h3><br>
+                <div class="content4">
+                    <table border="0">
+                        <tr>
+                            <th style="color:white;">Subject</th>
+                            <th style="color:white;">Main Contents</th>
+                        </tr>
+                        <tr>
+                            <td><font color="gray" id="sub">Mathematics</font></td>
+                            <td id="cont">
+                                <ul>
+                                    <li>Algebra</li>
+                                    <li>Geometry</li>
+                                    <li>Calculus</li>
+                                    <li>Statistics</li>
+                                    <li>Probability</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <img src="wp2043551-civil-engineering-wallpapers.jpg" class="innerimg">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><font color="gray">Physics</font></td>
+                            <td>
+                                <ul>
+                                    <li>Mechanics</li>
+                                    <li>Thermodynamics</li>
+                                    <li>Electromagnetism</li>
+                                    <li>Optics</li>
+                                    <li>Quantum Physics</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <img src="wp8339941-gargantua-wallpapers.jpg" class="innerimg">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><font color="gray">Chemistry</font></td>
+                            <td>
+                                <ul>
+                                    <li>Organic Chemistry</li>
+                                    <li>Inorganic Chemistry</li>
+                                    <li>Physical Chemistry</li>
+                                    <li>Analitical Chemistry</li>
+                                    <li>Biochemistry</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <img src="3481577.jpg" class="innerimg">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><font color="gray">Computer Science</font></td>
+                            <td>
+                                <ul>
+                                    <li>Programming</li>
+                                    <li>Datastructures</li>
+                                    <li>Algorithems</li>
+                                    <li>Databases</li>
+                                    <li>Computer Networks</li>
+                                </ul>
+                            </td>
+                            <td>
+                                <img src="wp8797510-quantum-computer-wallpapers.jpg" class="innerimg">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                </center>
+                
+
+            </div>
+           <!--<hr>--> 
+           <div>
+            <marquee direction="up"><img src="Untitled_design-removebg-preview.png"></marquee>
+           </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2025 Science Education Academy</p>
+        <div class="footcont1">
+            <ul>
+                <li style="color:#003366;">Sitemap</li>
+                <li>Home</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+    </footer>
+    <script>
+        let mathPara = 'Mathematics is the abstract science of numbers, quantity, and space. It is a fundamental discipline that underpins many aspects of our daily lives and the natural world. From simple arithmetic to complex calculus, mathematics provides the tools and frameworks for understanding patterns, solving problems, and making informed decisions. It is essential in fields such as engineering, physics, economics, and computer science, driving innovation and technological advancements. Whether calculating the trajectory of a spacecraft or analyzing data trends, mathematics is a universal language that helps us make sense of the world around us.';
+        let phyPara = 'Physics is the branch of science that explores the fundamental principles governing the natural world. It delves into the behavior of matter and energy, from the smallest particles to the vastness of the universe. By studying forces, motion, and the interactions between objects, physics helps us understand phenomena such as gravity, electromagnetism, and quantum mechanics. This knowledge is crucial for developing technologies that shape our modern world, from medical imaging devices to space exploration. Physics not only satisfies our curiosity about how the universe works but also drives innovation and progress in various fields.';
+        let chemiPara = 'Chemistry is the scientific study of substances, their properties, and how they interact with each other. It explores the composition, structure, and changes of matter, from the smallest atoms to complex molecules. Chemistry is essential in understanding the processes that occur in our daily lives, from cooking and cleaning to the development of new materials and medicines. By investigating chemical reactions and the behavior of elements, chemistry helps us innovate and solve problems in various fields, including healthcare, environmental science, and industry. It is a dynamic and ever-evolving discipline that continually expands our knowledge of the natural world.';
+        let comPara = 'Computer science is the study of computers and computational systems, encompassing both theoretical and practical aspects. It involves understanding algorithms, data structures, programming languages, and software development. Computer science drives innovation in various fields, from artificial intelligence and machine learning to cybersecurity and data analysis. By solving complex problems and creating efficient solutions, computer scientists contribute to advancements in technology that shape our modern world. Whether developing new applications or improving existing systems, computer science is at the heart of the digital revolution, transforming how we live, work, and communicate.';
+        
+        let cont = <ul>
+                                    <li>Algebra</li>
+                                    <li>Geometry</li>
+                                    <li>Calculus</li>
+                                    <li>Statistics</li>
+                                    <li>Probability</li>
+                    </ul>
+
+        console.log("Hello, world!");
+        function test(){
+            alert('just for test')
+        }
+        
+        function maths(){
+            
+            document.getElementById('mainPara').innerHTML = mathPara;
+            document.getElementById('sub').innerHTML = 'Mathematics';
+            document.getElementById('cont').innerHTML = cont;
+        }
+
+        function phy(){
+            
+            document.getElementById('mainPara').innerHTML = phyPara;
+        }
+
+        function chemi(){
+            
+            document.getElementById('mainPara').innerHTML = chemiPara;
+        }
+
+        function com(){
+            
+            document.getElementById('mainPara').innerHTML = comPara;
+        }
+        
+    </script>
+</body>
+</html>

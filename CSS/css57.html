@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css shadows</title>
+    <style>
+        h1{
+            text-shadow:3px 3px 3px black;
+            color:white
+        }
+        h2{
+            text-shadow:3px 3px 3px rgb(0, 0, 0),3px 3px 3px red;
+            color:white
+        }
+        .div1{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            box-shadow: 10px 10px 10px rgb(48, 46, 46);
+        }
+        .div2{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+        }
+        .div3{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            box-shadow: 10px 10px 10px 10px inset rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>this is a heading</h1>
+    <h2>this is a heading</h2>
+    <div class="div1"></div><br>
+    <div class="div2"></div><br>
+    <div class="div3"></div><br>
+</body>
+</html>

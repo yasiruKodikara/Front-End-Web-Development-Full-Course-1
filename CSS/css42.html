@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS counter</title>
+    <style>
+        body{
+            counter-reset:para;
+
+        }
+        p::before{
+            counter-increment:para;
+            content:'paragraph ' counter(para) ;
+        }
+    </style>
+</head>   
+<body>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+    <p>Hellow</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+button{
+    padding:10px;
+    border:1px solid black;
+    border-radius:5px;
+}
+table{
+    border:1px solid;
+    border-collapse:collapse;
+}
+
+.myh4{
+    color:blue;
+    background-color:yellow;
+}
+.whenActive{
+    color:red;
+    background-color:blueviolet
+}
+.whenNonActive{
+    color:blueviolet;
+    background-color:red;
+}

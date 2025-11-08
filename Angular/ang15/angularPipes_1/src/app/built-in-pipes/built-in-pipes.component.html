@@ -1,0 +1,36 @@
+<p>built-in-pipes works!</p>
+
+<h2>DatePipe Example</h2>
+<p>{{today| date }}</p>
+<p>{{today| date :'shortDate'}}</p>
+<p>{{today| date :'ddmmyyyy'}}</p>
+
+
+<h2>UpperCasePipe Example</h2>
+<p>{{text1 | uppercase}}</p>
+<p>{{text1 | lowercase}}</p>
+<p>{{text1 | titlecase}}</p>
+
+<h2>CurrencyPipe Example</h2>
+<p>{{amount | currency}}</p>
+<p>{{amount | currency:'EUR'}}</p>
+<p>{{amount | currency:'Rs.'}}</p>
+
+<h2>DecimalPipe Example</h2>
+<p>{{percentVal | number}}</p>
+<p>{{percentVal | number:'1.2-2'}}</p>
+
+<h2>PercentagePipe Example</h2>
+<p>{{percentVal | percent}}</p>
+<p>{{percentVal | percent:'1.2-2'}}</p>
+
+<h2>jsonPipe Example</h2>
+<p>{{jsonVal | json}}</p>
+
+<h2>SlicePipe Example</h2>
+<p>{{myArr | slice:1:4}}</p>
+
+<h2>KeyValuePipe Example</h2>
+<li *ngFor="let item of myObj | keyvalue">{{item.key}}:{{item.value}}</li>
+
+

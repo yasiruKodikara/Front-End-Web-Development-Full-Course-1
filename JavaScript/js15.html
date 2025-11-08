@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="text"], input[type="password"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+        }
+        button[type="reset"] {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function checkinput(){
+            //alert('hi');
+            let age = document.getElementById('age').value;
+          //  age = age == ' ' ? 10 :age;
+
+            if (age>=18){
+                alert('Adult');
+            }
+            else{
+                alert('child');
+            }
+        }
+
+        function checkCountry(){
+            let c = document.getElementById('country').value;
+            alert(c)
+
+            if (c=='Sri Lanka'){
+            alert('welcome to srilanka');
+            }
+            else{
+                alert('welcome to '+c);
+            }
+        }
+        
+    </script>
+    <form>
+        
+        <label for="age">age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <!-- <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="gender">Gender:</label>
+        <input type="checkbox" id="male" name="gender" value="male"> Male
+        <input type="checkbox" id="female" name="gender" value="female"> Female
+
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" rows="4" required></textarea>
+    -->
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="sri_lanka">Sri Lanka</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select> 
+
+        <button onclick="checkCountry()">
+            Check Country
+        </button>
+
+        <button type="submit" onclick="checkinput()">Submit</button>
+        <button type="reset">Reset</button>
+
+        
+    </form>
+
+
+    
+
+</body>
+</html>

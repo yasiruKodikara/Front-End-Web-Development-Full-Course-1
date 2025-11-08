@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    myinput:<input type="text" id="in1">
+    <button id="one">ClickME</button>
+    <script>
+        let mybtn = document.getElementById('one');
+        mybtn.onfocus = function(){
+            console.log('Focused');
+        }
+
+        let myinput = document.getElementById('in1');
+        myinput.onfocus = function(){
+            console.log('input focused');
+        }
+
+        //adding event listener
+        myinput.addEventListener('keyup',function(e){
+            if(e.key=='s'){
+                e.preventDefault();
+            }
+            else{
+                console.log(e.key);
+            }
+        });
+         
+        </script>
+</body>
+</html>

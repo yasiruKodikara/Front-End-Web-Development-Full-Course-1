@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backdrop-filter</title>
+<style>
+div.background1 {
+  background: lightblue url(img3.jpg) no-repeat center;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: 400px;
+}
+
+div.transbox1 {
+  background-color: rgba(255, 255, 255, 0.185);
+  /*-webkit-backdrop-filter: sepia(100%);*/
+  backdrop-filter:blur(2px); /*blur,none,drpo-shadow,sepia,brightness,contrast,grayscale,hue-rotate,invert,opacity,saturate*/
+  padding: 20px;
+  margin: 30px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h1>The backdrop-filter Property</h1>
+
+<div class="background1">
+  <div class="transbox1">
+    <p>This is some text.</p>
+  </div>
+</div>
+
+</body>
+</html>

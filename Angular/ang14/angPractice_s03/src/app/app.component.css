@@ -1,0 +1,14 @@
+table{
+    border:1px solid;
+    border-collapse:collapse;
+}
+
+.myh3{
+    color:green;
+    background-color:yellow;
+}
+
+.myh4{
+    color:black;
+    background-color:yellow;
+}

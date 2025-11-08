@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Inputs</title>
+</head>
+<body>
+    <script>
+        function compare() {
+            let input1 = document.getElementById('input1').value;
+            let input2 = document.getElementById('input2').value;
+
+            //Casting
+            input1 = Number(input1);
+            input2 = Number(input2);
+            //parsefloat,parseint
+//comparison tests
+            if (input1 == input2) {//value only check
+                alert('The inputs are the same.');
+                output = 'input1 = input2 <br>';
+            }
+            if (input1 === input2){
+                alert('input1 === input2');
+                output = 'input1===input2';
+            }
+
+            if (input1 !== input2){
+                alert('input1 !== input2');
+                output = 'input1 and input2 are not equel';
+            }
+
+//Logical tests
+
+        document.getElementById('result').innerHTML = output; 
+        }
+    </script>
+    <label for="input1">Input 1:</label>
+    <input type="text" id="input1" name="input1"><br><br>
+    <label for="input2">Input 2:</label>
+    <input type="text" id="input2" name="input2"><br><br>
+    <button onclick="compare()">Compare</button>
+    <div id="result"></div>
+</body>
+</html>

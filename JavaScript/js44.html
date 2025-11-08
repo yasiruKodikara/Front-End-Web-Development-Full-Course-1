@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch data from web(old method and new method)</title>
+    <style>
+        button{
+            padding:10px;
+            border-radius:8px;
+            background-image:linear-gradient(to right,rgb(0, 255, 200),rgb(51, 180, 255));
+            color:white;
+            font-weight:bold;
+
+        }
+        hr{
+            padding:2px;
+            border-radius:5px;
+            background-image:linear-gradient(to right,black, rgb(0, 174, 255),black);
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch data from web</h1>
+
+    <h2>Old Method</h2>
+    <hr>
+    <button onclick='getData()'>Get Data</button>
+<br><br><br><br>
+    <h2>New Method</h2>
+    <hr>
+    <button onclick='getData2()'>Get Data From Fetch </button>
+    <script>
+        //old method
+        function getData(){
+            alert('Getting Data...');
+
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState ==4 && this.status == 200){
+                    console.log(xhttp.responseText);
+                    console.log(xhttp.responseXML);
+                }
+            }
+
+            xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
+            xhttp.send();
+        }
+        //new method
+
+        
+
+        function getData2(){
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+                .then(function(response){
+                    return response.json()
+                })
+                .then(function(data){
+                    console.log(data)
+                })
+        }
+
+    </script>
+</body>
+</html>

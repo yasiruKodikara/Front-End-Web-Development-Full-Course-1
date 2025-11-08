@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST Method</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <input type="text" name="name">
+    <p id="para"></p>
+    <script>
+        $(document).ready(function(){
+            $('input').keyup(function(){
+                var name = $('input').val();
+                $.post('phpForajax5.php',{
+                    suggestion: name
+                },function(data,status){
+                    $('#para').html(data);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

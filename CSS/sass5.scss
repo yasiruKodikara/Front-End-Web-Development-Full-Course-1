@@ -1,0 +1,27 @@
+/*
+string length syntax
+
+str-length(string)
+*/
+
+$myText: 'Hello world';
+
+$length: str-length ($myText);
+
+body::after {
+  content: 'the length of the string is #{$length} characters'; // Corrected spelling
+}
+
+/*quote(string)
+*/
+
+/*
+str-index(string,substring)
+str-insert(string,insert,index)
+str-slice(string,start,end)
+to-lower-case(string)
+to-upper-case(string)
+unique-id()
+unquote(string)
+
+*/

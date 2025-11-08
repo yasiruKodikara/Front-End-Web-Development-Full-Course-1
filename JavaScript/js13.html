@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    
+    <h1 id = 'title'>JS DOM
+    </h1>
+
+    <p class="p1">
+        this is a paragraph
+    </p>
+
+    <p class="p1">
+        this is a paragraph
+    </p>
+
+    <button>ClickME</button>
+
+    <a href="https://www.google.com" id="link1">Google</a>
+
+    <script>
+    //getElementByTagName
+    let textList = document.getElementById('title');
+    console.log(textList);
+    console.log(textList.innerHTML);
+
+    textList.innerHTML = 'changed';
+
+    //change an attribute 
+    let mylink = document.getElementById('link1');
+    console.log(mylink);
+    console.log(mylink.innerHTML);
+
+    console.log(mylink.href);
+
+    //change the text of link
+    mylink.innerHTML = 'youtube';
+    console.log(mylink.innerHTML);
+
+    //change the link
+    mylink.href = 'https://www.youtube.com';
+    console.log(mylink.href);
+
+
+
+    </script>
+
+
+
+</body>
+</html>

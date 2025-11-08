@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <p id="dis">Message</p>
+    <button onclick="processUserInput(greetings)">ClickMe</button>
+    <script>
+        function greetings(name){
+            document.getElementById('dis').innerHTML = 'Hello ' + name
+        }
+
+
+        function processUserInput(callbackVar){
+            let name = prompt('Enter your name');
+            callbackVar(name)
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

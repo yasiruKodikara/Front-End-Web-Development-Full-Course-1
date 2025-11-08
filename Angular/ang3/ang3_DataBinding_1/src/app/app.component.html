@@ -1,0 +1,49 @@
+<app-login></app-login>
+<h2>{{title}}</h2>
+<h2>{{2+2}}</h2>
+
+<!--using property binding-->
+<img [src]="imageUrl" alt="Angular Logo" />
+<button [disabled]="isdisabled">clickMe</button>
+
+<!--using string interpolation-->
+<img src="{{imageUrl}}" alt="Angular Logo" />
+
+<hr>
+<!--attribute binding-->
+<button [attr.aria-label]="ariaLabelTxt">AttributeBinding</button>
+<button>Without AttributeBinding</button>
+
+<hr>
+<table>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+    </tr>
+    <tr>
+        <td>Akon</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Bkon</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>Ckon</td>
+        <td>20</td>
+    </tr>
+    <tr><!--using property binding-->
+        <td [colSpan]="colSpan">sum of the ages:60</td>
+    </tr>
+
+</table>
+
+<!--style binding-->
+<h3 [style.color]="color" [style.background-color]="bgcolor">{{title}}</h3>
+<h4 [class.myh4]='true'>{{title}}</h4>
+<h5 [style.color]='isActive ? "red" : "green" '>{{title}}</h5>
+
+<p [class.whenActive]='isActive2' [class.whenNonActive]="!isActive2">this is a paragraph</p>
+<p [class.whenActive] = 'name == "yasiru"' [class.whenNonActive] = 'name != "yasiru"'>this is a paragraph</p>
+
+<!-- Event Binding -->

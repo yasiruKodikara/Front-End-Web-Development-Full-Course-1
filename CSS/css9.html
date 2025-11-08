@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        tr:nth-child(even){
+            background-color: white;
+        }
+        table{
+            
+            border:2px solid rgb(251, 255, 0);
+            background-color: rgb(255, 0, 0);
+            width:600px;
+            text-align: center;
+            height: 500px;
+
+        }
+        td{
+            padding:10px;
+        }
+        td,th{
+            border-bottom: 10px solid;
+        }
+        tr:hover{
+            background-color: rgb(255, 111, 111);
+        }
+    </style>
+</head>
+<body>
+    <h1>Table</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+                <th>Header 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1, Cell 1</td>
+                <td>Row 1, Cell 2</td>
+                <td>Row 1, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td>
+                <td>Row 2, Cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, Cell 1</td>
+                <td>Row 3, Cell 2</td>
+                <td>Row 3, Cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

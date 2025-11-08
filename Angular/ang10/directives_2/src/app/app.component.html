@@ -1,0 +1,116 @@
+<h1>{{title}}</h1>
+<h2>{{students}}</h2>
+<h2>{{students[0]}}</h2>
+<h2>{{students[1]}}</h2>
+<h2>{{students[2]}}</h2>
+<!--ex0 old v-->
+<h2 *ngFor = "let student of students">{{student}}</h2>
+
+<!--ex0 new v-->
+@for (student of students; track student) {
+    <h2>{{student}}</h2>
+}
+<!--ex1 old-->
+<ul>
+    <li *ngFor="let student of students">{{student}}</li>
+</ul>
+<!--ex1 new-->
+<ol>
+    @for(student of students;track student){
+        <li>{{student}}</li>
+    }
+</ol>
+
+<!--ex2 old-->
+<ul>
+    <li *ngFor="let user of users">{{user.id}} | {{user.name}} | {{user.email}}</li>
+</ul>
+<!--ex2 new-->
+<ul>
+    @for(user of users; track user){
+        <li>{{user.id}} | {{user.name}} | {{user.email}}</li>
+    }
+</ul>
+
+
+
+
+<!--ex3 old-->
+<ul>
+    <li *ngFor="let user of users">{{user.id}} | {{user.name}} | {{user.email}}</li>
+</ul>
+@if(users.length==0){
+    <h2>there are no any users</h2>
+}
+
+
+<!--ex3 new-->
+<ul>
+    @for(user of users; track user){
+        <li>{{user.id}} | {{user.name}} | {{user.email}}<button (click)="deleteUser(user)">Delete</button></li>
+    }
+    @empty {
+        <h2>there are no any users</h2>
+    }
+</ul>
+
+<!--ex4 old-->
+<button (click)="addNewUser()">Add User</button> 
+<!--ex4 new-->
+
+<!--ex5 old-->
+<ul>
+    <li *ngFor="let user of users; let first=first">{{first}}-{{user.id}} | {{user.name}} | {{user.email}}</li>
+</ul>
+<!--ex5 new-->
+<ul>
+    @for(user of users; track $index;let i = $index; let first=$first ; let last = $last){
+        <li>{{last}}--{{user.id}} | {{user.name}} | {{user.email}}<button (click)="deleteUser(user)">Delete</button></li>
+    }
+    @empty {
+        <h2>there are no any users</h2>
+    }
+</ul>
+
+<!--ex6(nested loop) old-->
+<div *ngFor='let category of nestedItems'>
+    <h2>{{category.category}}</h2>
+    <ul>
+        <li *ngFor="let item of category.items">{{item}}</li>
+    </ul>
+</div>
+<!--ex6 new-->
+@for(category of nestedItems;track category){
+    <h2>{{category.category}}</h2>
+    <ul>
+       
+            @for(item of category.items;track item){
+                <li>{{item}}</li>
+            }
+        
+    </ul>
+}
+
+<!--ex7 old-->
+<div [ngSwitch]="role">
+    <h1 *ngSwitchCase="'admin'">welcome admin</h1>
+    <h1 *ngSwitchCase="'editor'">welcome editor</h1>
+    <h1 *ngSwitchCase="'user'">welcome user</h1>
+    <h1 *ngSwitchDefault>Unknown User</h1>
+</div>
+
+<!--ex7 new-->
+@switch(role){
+    @case('admin'){
+        <h1>welcome admin</h1>
+    }
+    @case('editor'){
+        <h1>welcome editor</h1>
+    }
+    @case('user'){
+        <h1>welcome user</h1>
+    }
+    @default { 
+        <h1>unknown user</h1>
+    }
+}

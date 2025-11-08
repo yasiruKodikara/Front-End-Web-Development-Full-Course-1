@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block scope</title>
+</head> 
+<body>
+    <script>
+        let globalScope = 'this is a globalscope var';
+        {
+            let myName = 'Akon';
+        }
+        //console.log(myName); //this will gives an error
+
+        {
+            let test = 'Akon';
+            console.log(test);
+        }
+    </script>
+</body>
+</html>

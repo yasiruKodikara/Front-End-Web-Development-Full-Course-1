@@ -1,0 +1,91 @@
+<h1>{{title}}</h1>
+<app-user [name]="name">
+  <p>hello from parent {{name}}</p>
+</app-user>
+<!--render a component using  *ngComponentOutlet directive-->
+<!--<div *ngComponentOutlet='loadComponent()'></div>
+
+
+<hr>
+<!-- render a component using ViewContainerRef-->
+
+<button (click)="addComponent()">Add Component</button>
+
+
+
+<!--remove a component-->
+
+<button (click)="removeComponent()">Remove component</button> 
+
+<!--lifeCyleHook:  ngOnChanges-->
+<!--Trigger:Called whenever an input property changes-->
+<!--Use Case:Detect changes to @Input() properties-->
+<!--if the parent component updates the name property,ngOnChanges is triggered to log the changes.-->
+<!--implements OnChanges-->
+<!--import {OnChanges} from '@angular/core'-->
+
+<button (click)='changeName()'>change Name</button>
+
+<!--lifeCyleHook:  ngOnInit-->
+<!--Trigger:Called once agter the components's first ngOnChanges-->
+<!--Use Case:Intialize data or perform setup tasks.-->
+<!--This hook is perect for fetching data or initializing variables when the component is created.-->
+<!--implements OnInit-->
+<!--import {OnInit} from '@angular/core'-->
+
+<!--lifeCyleHook:  ngDoCheck-->
+<!--Trigger:Called during every change detection cycle-->
+<!--Use Case:Detect and act upn changes that Angular might not notice-->
+<!--implements DoCheck-->
+<!--import {DoCheck} from '@angular/core'-->
+
+<!--lifeCyleHook:  ngAfterContentInit-->
+<!--Trigger:Called once after Angular projects external content into the componenet.-->
+<!--Use Case:Perform logic when content is projected into <ng-content>-->
+<!--implements AfterContentInit-->
+<!--import {AfterContentInit} from '@angular/core'-->
+
+
+<!--lifeCyleHook:  ngAfterContentChecked-->
+<!--Trigger:Called after every check of projected content.-->
+<!--Use Case:Respond to changes in projected content.-->
+<!--implements AfterContentChecked-->
+<!--import {AfterContentChecked} from '@angular/core'-->
+
+
+<!--lifeCyleHook:  ngAfterViewInit-->
+<!--Trigger:Called once after the component's view and child views are initialized.-->
+<!--Use Case:Access child component or DOM elements.-->
+<!--implements AfterViewInit-->
+<!--import {AfterviewInit} from '@angular/core'-->
+
+
+<!--lifeCyleHook:  ngAfterViewChecked-->
+<!--Trigger:Called after every check of the component's view.-->
+<!--Use Case:Respond to changes in the view-->
+<!--implements AfterViewChecked-->
+<!--import {AfterviewChecked} from '@angular/core'-->
+
+
+<!--lifeCyleHook:  ngOnDestroy-->
+<!--Trigger:Called just before the component is destroyed.-->
+<!--Use Case:Cleanup tasks like unsubscribing from observables or detaching event listners.-->
+<!--implements OnDestroy-->
+<!--import {OnDestroy} from '@angular/core'-->
+
+
+
+<!--Lifecycle Hooks Execution Order-->
+<!--
+1.ngOnChanges
+2.ngOnInit
+3.ngDoCheck
+4.ngAfterContentInit
+5.ngAfterContentChecked
+6.ngAfterViewInit
+7.ngAfterViewChecked
+8.ngOnDestroy
+-->
+
+
+

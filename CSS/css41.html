@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        input[type='text'],input[type='email']{
+            width:100%;
+            padding:20px;
+            margin:10px;
+            border:1px solid rgb(53, 3, 68);
+            background-color:rgb(150, 231, 204);
+            border-radius:9px;
+        }
+        input:focus{
+            background-color:blue;
+        }
+        textarea{
+            width:100%;
+            resize:none;
+        }
+        input[type='submit']{
+            background-color:blue;
+            color:white;
+            padding:10px;
+            border-radius:9px;
+            border:none;
+            cursor:pointer;
+            width:100%;
+        }
+        select{
+            width:100%;
+            padding:20px;
+            background-color:rgb(150, 231, 204);
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="options">Options:</label>
+        <select id="options" name="options">
+        <option value="option1">Option 1</option>
+        <option value="option2">Option 2</option>
+        <option value="option3">Option 3</option>
+    </select><br><br>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <input type="submit" value="Submit">
+    
+    
+    </form>
+</body>
+</html>

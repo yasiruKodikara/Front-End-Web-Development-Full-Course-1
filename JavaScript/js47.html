@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop3</title>
+</head>
+<body>
+    <script>
+        
+
+        class Person{
+            constructor(name,age,hobbies){
+                this.name = name;
+                this.age = age;
+                this.hobbies = hobbies;
+            }
+
+            showInfo(){
+                console.log('hi iam '+this.name+' iam '+this.age+' years old')
+            }
+
+            static sayHi(){
+                console.log('hi.this is a static method')   //static method
+            }
+        }
+
+        let user1 = new Person('akon',20,['reading','writing']);
+        console.log(user1);
+        user1.showInfo();
+
+        let user2 = new Person('bkon',20,['reading','writing']);
+        console.log(user2);
+        user2.showInfo();
+
+        
+
+        class Student extends Person{
+
+            constructor(name,age,hobbies,schoolName){
+                super(name,age,hobbies);
+                this.schoolName = schoolName;
+            }
+
+            showHobbies(){
+                console.log('my hobbies are '+this.hobbies)
+            }
+            showInfo(){
+                console.log('Student name is'+this.name+'and the age is '+this.age)
+            }
+        }
+
+        let student1 = new Student('çkon',19,['it','math']);
+        let student2 = new Student('dkon',19,['it','math'],'central collage');
+        console.log(student1)
+        console.log(student2)
+        
+        //unkown number of arguments
+
+        class Engineer extends Person{
+            constructor(name,age,hobbies,site){
+                super(name,age,['reading']);
+                this.site = site;
+            }
+        }
+        
+        let engineer1 = new Engineer('ekon',20,'google');
+        console.log(engineer1)
+
+        
+    </script>
+</body>
+</html>
