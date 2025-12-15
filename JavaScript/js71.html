@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="large centered row">
+    <div class="col">
+        <div class="square"></div>
+    </div>
+    </div>
+    <div class="small centered row">
+    <span class="label">Move cursor around</span>
+    </div>
+    <script type="module">
+        import { createAnimatable } from './node_modules/animejs/lib/anime.es.js';
+        import {
+  animate,
+  stagger,
+} from './node_modules/animejs/lib/anime.es.js';
+
+animate('.square', {
+  x: 320,
+  rotate: { from: -180 },
+  duration: 1250,
+  delay: stagger(65, { from: 'center' }),
+  ease: 'inOutQuint',
+  loop: true,
+  alternate: true
+});
+
+    </script>
+</body>
+</html>
